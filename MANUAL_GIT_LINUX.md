@@ -2,12 +2,8 @@
 Generado automáticamente por el scraper de **JoseLRC224** el 05/01/2026.
 
 ## Índice
-* [Bash_(Unix_shell)](#bash_(unix_shell))
 * [Git](#git)
 * [Linux](#linux)
-
----
-## Bash_(Unix_shell)
 
 ---
 ## Git
