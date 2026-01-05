@@ -1,0 +1,28 @@
+GUÍA RÁPIDA: CONFIGURAR SSH PARA GITHUB
+---------------------------------------
+
+1. GENERAR LA LLAVE:
+   Escribe el siguiente comando (cambia el correo por el tuyo):
+   ssh-keygen -t ed25519 -C "tu_email@ejemplo.com"
+   
+   * Dale a 'Enter' a todo (no necesitas poner contraseña si quieres rapidez).
+
+2. INICIAR EL AGENTE:
+   eval "$(ssh-agent -s)"
+
+3. AGREGAR LA LLAVE AL AGENTE:
+   ssh-add ~/.ssh/id_ed25519
+
+4. COPIAR LA LLAVE PÚBLICA:
+   cat ~/.ssh/id_ed25519.pub
+   
+   * Selecciona y copia todo el texto que empieza con 'ssh-ed25519...'.
+
+5. PEGAR EN GITHUB:
+   - Ve a github.com -> Settings -> SSH and GPG keys.
+   - Botón 'New SSH key'.
+   - Pégale un título (ej: "WSL Windows") y pega el código.
+
+6. PROBAR CONEXIÓN:
+   ssh -T git@github.com
+
